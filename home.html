@@ -1,4 +1,3 @@
-<?php session_start()?>
 <html>
 
 <!-- Mirrored from dronsimulation.web.app/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jun 2025 15:57:39 GMT -->
@@ -13,9 +12,6 @@
 <script src="semantic/semantic.min.js"></script>
 <link href="semantic/datepicker.css" rel="stylesheet" type="text/css">
 <script src="semantic/datepicker.js"></script>
-<script>
-  var ORDERREF = '<?php echo $_SESSION['ORDERREF']?>';
-</script>
 <script src="nav.js"></script>
 
 <style>
@@ -23,7 +19,7 @@ body{
 background-color:f1f1f1;
 }
 a{
-cursor:pointer;	
+cursor:pointer;
 }
 </style>
 </head>
@@ -55,8 +51,8 @@ cursor:pointer;
       <div class="title">Deployment Sequence</div>
       <div class="description">view Deployment sequence</div>
     </div>
-  </div> 
-  
+  </div>
+
   <div class=" step" id="billingbtn" onclick="billing()">
     <i class="money icon"></i>
     <div class="content">
@@ -64,7 +60,7 @@ cursor:pointer;
       <div class="description">View Current Drone Progress in real time</div>
     </div>
   </div>
-   
+
 </div>
 </div>
 <br>
@@ -73,16 +69,16 @@ cursor:pointer;
 <div class="ui container text" id="booking-page">
 <center><div class="ui attached message">
   <div class="header">Select Available Dron Option</div>
-    <div class="header">Please do not select a dron already in use<span style="color:red;font-size:15px"><a href='index-2.html'>Cancel Deployment</a></span> </div> 
-  <p>Enter Bus booking info</p>
+    <div class="header">Please do not select a dron already in use<span style="color:red;font-size:15px"><a href='index-2.html'>Cancel Deployment</a></span> </div>
+  <p>Select a drone to begin your delivery.</p>
 </div></center>
 
 <form class="ui form attached  segment" ">
    <div class="field">
-    
+
 	Click Here to selection available dron<label class="ui green submit button" onclick="myFunction()">Dron Options</label>
-	
-	
+
+
 <!-- //search bar starts here ut to center -->
 
 <div class="dropdown">
@@ -92,7 +88,7 @@ cursor:pointer;
     <a href="#modal-2">MK11 Bumblebee</a>
     <a href="#modal-3">MK13 Optimus</a>
 	<a href="#modal-5">MK14 StarScream</a>
-   
+
   </div>
 </div>
 
@@ -104,8 +100,8 @@ cursor:pointer;
 <div class="card">
   <img src="dronimg/megatron.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>Dron Status: Available</b></h4> 
-    <p class="ui green submit button" onclick="contact()" id="contactbtn">Select this Drone</p> 
+    <h4><b>Dron Status: Available</b></h4>
+    <p class="ui green submit button" onclick="contact()" id="contactbtn">Select this Drone</p>
   </div>
 </div>
 </center>
@@ -120,8 +116,8 @@ cursor:pointer;
 <div class="card">
   <img src="dronimg/bumblebee.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>Dron Status: Available</b></h4> 
-    <p class="ui green submit button" onclick="contact()" id="contactbtn">Select this Drone</p> 
+    <h4><b>Dron Status: Available</b></h4>
+    <p class="ui green submit button" onclick="contact()" id="contactbtn">Select this Drone</p>
   </div>
 </div>
 </center>
@@ -135,8 +131,8 @@ cursor:pointer;
 <div class="card">
   <img src="dronimg/Optimusprime.png" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>drone Status: in Maintenance</b></h4> 
-    <p class="ui green submit button" >cannot Select this Dron</p> 
+    <h4><b>drone Status: in Maintenance</b></h4>
+    <p class="ui green submit button" >cannot Select this Dron</p>
   </div>
 </div>
 </center>
@@ -146,38 +142,19 @@ cursor:pointer;
 	<div>
 		<a href="#close" title="Close" class="close">x</a>
 		<center>
-<h2>Call IT iatance</h2>
-<div class="card
+<h2>MK14 StarScream</h2>
 <div class="card">
   <img src="dronimg/Optimusprime.png" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>drone Status: in Maintenance</b></h4> 
-    <p class="ui green submit button" >cannot Select this Dron</p> 
+    <h4><b>drone Status: in Maintenance</b></h4>
+    <p class="ui green submit button" >cannot Select this Dron</p>
   </div>
-</div>
-  </div>
-</center>
-	</div>
-</div>
-<div id="modal-4" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">x</a>
-		<center>
-<h2>Call IT Support Specialist for Technical Assiatance</h2>
-<div class="card">
-  <h1> 08138936556</h1>
-  <div class="container">
-     </div>
 </div>
 </center>
 	</div>
 </div>
 
 
- <div style="text-align:center">
- <div><label>call IT for Specific Information of Deployment</label></div>
-  <a href="#modal-4">Call Now </a>
-</div> 
 </div>
  </form>
 </div>
@@ -265,50 +242,44 @@ function filterFunction() {
 <!-- //search bar starts here ut to center -->
 
   </div>
-  
- 
+
+
 
 
 <div class="ui container text" id="contact-page" style="display:none">
 <div class="ui attached message">
-  <div class="header">Enter your Pickup Location Details! </div>
-   <div class="header">and customer Destination <span style="color:red;font-size:15px"><?php echo $_SESSION['ORDERREF']?> <a href='index-2.html'> Cancel Deployment</a></span> </div>
+  <div class="header">Enter Delivery Details</div>
   <p>Fill the required Fields</p>
 </div>
 <form class="ui form attached fluid loading segment" onsubmit="return billing(this)">
 <div class="field">
-    <label>Product Pickup Location</label>
+    <label>Pickup Location</label>
  <div class="field">
-    <select name="gender" required id="gender">
+    <select name="pickup_location" required id="pickup_location">
       <option value="" selected disabled>--Choose Pickup Point--</option>
-      <option value="MALE">Unicron Store 1</option>
-	   <option value="MALE">Unicron Store 2</option>
-	    <option value="MALE">Unicron Store 3</option>
-      <option value="FEMALE">Cybertron Ultra Store1</option>
-	  <option value="FEMALE">Cybertron Ultra Store2</option>
-	        <option value="FEMALE">Cybertron Ultra Store3</option>
-
-
+      <option value="warehouse_a">Warehouse A</option>
+	   <option value="warehouse_b">Warehouse B</option>
+	    <option value="warehouse_c">Warehouse C</option>
     </select>
-  </div>   
-  </div>   
+  </div>
+  </div>
    <div class="field">
-      <label>customers</label>
-      <input placeholder="Full name" type="text" id="fullname" required>
+      <label>Recipient Name</label>
+      <input placeholder="e.g. John Doe" type="text" id="fullname" required>
     </div>
 
   <div class="field">
-    <label>Enter Customers Location Coordinate</label>
-    <input placeholder="Mobile No/Contact or Email address" type="text" id="contact" required>
+    <label>Recipient Address / Coordinates</label>
+    <input placeholder="e.g. 123 Main St, Anytown USA or 40.7128° N, 74.0060° W" type="text" id="contact" required>
   </div>
 
- 
- 
- <div style="text-align:center">
- <div><label>copy customers location Cordinates into the form above</label></div>
- <p>Click the button to get your customers location.</p>
 
-<button onclick="getLocation()">Get Customers Location</button>
+
+ <div style="text-align:center">
+ <div><label>Use the button below to get your current location, or enter the recipient's address or coordinates manually.</label></div>
+ <p>Click the button to get your location.</p>
+
+<button onclick="getLocation()">Get Current Location</button>
 
 <p id="demo"></p>
 
@@ -318,39 +289,39 @@ var x = document.getElementById("demo");
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
+  } else {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  x.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
  <button class="ui green submit button">Submit Details</button>
 </div>
-  
+
   </form>
 </div>
 
 <div class="ui container text" id="billing-page" style="display:none">
 <div class="ui attached message">
   <div class="header">Location on the Map</div>
-    <div class="header"> View Current Progress in real time<span style="color:red;font-size:15px"><?php echo $_SESSION['ORDERREF']?> <a href='index-2.html'>Cancel Deployment</a></span> </div> 
+    <div class="header"> View Current Progress in real time<span style="color:red;font-size:15px"><a href='index-2.html'>Cancel Deployment</a></span> </div>
   <p>Enter click next to Proceed</p>
 </div>
 
 <form id=mechengine class="ui form attached fluid loading segment" onsubmit="return confirmdetails(this)">
-  <div class="field"> 
+  <div class="field">
 
 <div class="mapouter"><div class="gmap_canvas"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15691.63459617841!2d7.439240449999999!3d10.5078611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d355834371775%3A0x480195979abfe174!2s800283%2C%20Kaduna%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1658226486968!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a href="https://fmovies-online.net/"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net/">google maps website embed</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
-  
+
  <div style="text-align:center">
   <button class="ui green submit button">Next</button>
 </div>
  </form>
-<div class="ui bottom attached warning message"><i class="icon help"></i><b id="payment-info"></b></div> 
+<div class="ui bottom attached warning message"><i class="icon help"></i><b id="payment-info"></b></div>
 </div>
 </div>
 
@@ -363,10 +334,10 @@ function showPosition(position) {
 <!-- partial:index.partial.html -->
 <h1>Drone Delivery Sequence</h1>
 <div class="tabs">
-  
+
   <input type="radio" id="tab1" name="tab-control" checked>
   <input type="radio" id="tab2" name="tab-control">
-  <input type="radio" id="tab3" name="tab-control">  
+  <input type="radio" id="tab3" name="tab-control">
   <input type="radio" id="tab4" name="tab-control">
   <ul>
     <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
@@ -379,14 +350,14 @@ function showPosition(position) {
     <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
 </svg><br><span>Returns</span></label></li>
   </ul>
-  
+
   <div class="slider"><div class="indicator"></div></div>
   <div class="content">
     <section><center>
       <div class="card">
   <img src="dronimg/task2.gif" alt="Avatar" style="width:">
   <div class="container">
-    <h4><b>Drone Acquiring product from Store</b></h4> 
+    <h4><b>Drone Acquiring product from Store</b></h4>
     <a href="#tab1"><p class="ui green button"></p> </a>
   </div>
 </div></center></section>
@@ -395,7 +366,7 @@ function showPosition(position) {
           <div class="card">
   <img src="dronimg/task3.gif" alt="Avatar" style="width:">
   <div class="container">
-    <h4><b>Approaching Delivery Destination Point</b></h4> 
+    <h4><b>Approaching Delivery Destination Point</b></h4>
     <a href="#tab1"><p class="ui green button">proceed</p> </a>
   </div>
 </div></center></section>
@@ -405,7 +376,7 @@ function showPosition(position) {
   <img src="dronimg/task4.gif" alt="Avatar" style="width:">
   <img src="dronimg/track5.gif" alt="Avatar" style="width:">
   <div class="container">
-    <h4><b>Dron Arriving at sutomers Location based on coordinate</b></h4> 
+    <h4><b>Dron Arriving at sutomers Location based on coordinate</b></h4>
     <a href="#tab1"><p class="ui green button">proceed</p> </a>
   </div>
 </div></center></section>
@@ -413,10 +384,10 @@ function showPosition(position) {
           <h2>Returns</h2>
           <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylecard.css">
-<div id="container">	
-	
+<div id="container">
+
 	<div class="product-details">
-		
+
 	<h1>ARRIVAL AND  RETURN</h1>
 	<span class="hint-star star">
 		<i class="fa fa-star" aria-hidden="true"></i>
@@ -425,27 +396,27 @@ function showPosition(position) {
 		<i class="fa fa-star" aria-hidden="true"></i>
 		<i class="fa fa-star-o" aria-hidden="true"></i>
 	</span>
-		
+
 			<p class="information"> click the button below to reytun the drone following the return sequence which goes the same rouets as it comes.</p>
 
-		
-		
+
+
 <div class="control">
-	
+
 	<button class="btn">
 	 <span class="price">Done</span>
    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
    <span class="buy">Return Done</span>
  </button>
-	
+
 </div>
-			
+
 </div>
-	
+
 <div class="product-image">
-	
+
 	<img src="dronimg/task3.gif" alt="">
-	
+
 
 <div class="info">
 	<h2> Delivery Status report</h2>
@@ -453,8 +424,8 @@ function showPosition(position) {
 		<li><strong>Status : </strong>1complete </li>
 		<li><strong>Satisfaction: </strong>100%</li>
 		<li><strong>Time: </strong>12:15pm</li>
-		
-		
+
+
 	</ul>
 </div>
 </div>
@@ -547,7 +518,7 @@ a{
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
 	background: white;
-	
+
 }
 .modalDialog2 > div {
 	width: 100%;
@@ -555,7 +526,7 @@ a{
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
 	background: white;
-	
+
 }
 
 .close {
@@ -572,7 +543,7 @@ a{
 	font-weight: bold;
 }
 
-.close:hover { 
+.close:hover {
 color: #EA4436;
 }
 
